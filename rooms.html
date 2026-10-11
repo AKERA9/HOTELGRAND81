@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37 Luxury Rooms & Suites | Hotel Grand 81 Sector 81 Faridabad</title>
+    <meta name="description" content="Explore 37 well-appointed rooms at Hotel Grand 81 Faridabad. Executive Deluxe Rooms, Corporate Business Suites, and Family Function Stays near World Street Omaxe Mall.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-ticker" id="topBarTicker">
+                <div class="ticker-item active">
+                    <i class="fas fa-bed" style="color:var(--primary-gold);"></i> 
+                    <span>37 Well-Appointed Rooms | Corporate Suites | Family Function Stays</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-phone-alt" style="color:var(--primary-gold);"></i> 
+                    <span>Mr. Pritam Khanna: <a href="tel:7042420045" style="color:#FFF; font-weight:700; text-decoration:underline;">+91 70424 20045</a></span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-map-marker-alt" style="color:var(--primary-gold);"></i> 
+                    <span>Vipul Plaza, Sector 81, Opposite World Street Omaxe Mall, Faridabad</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo-link">
+                <div class="logo-badge">81</div>
+                <div class="logo-text-box">
+                    <div class="logo-title">HOTEL GRAND <span>81</span></div>
+                    <div class="logo-sub">SECTOR 81 • FARIDABAD</div>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rooms.html" class="active">37 Rooms</a></li>
+                <li><a href="dining.html">Rooftop Dining</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <a href="https://wa.me/917042420045?text=Hello%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20inquire%20about%20booking%20at%20Hotel%20Grand%2081." target="_blank" class="btn btn-whatsapp nav-cta-btn" style="padding: 0.55rem 1.1rem; font-size: 0.82rem;">
+                    <i class="fab fa-whatsapp"></i> Quick Booking
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INNER PAGE HERO BANNER -->
+    <header class="page-banner">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <span>/</span>
+                <span>37 Rooms</span>
+            </div>
+            <h1 class="page-banner-title">37 Well-Appointed Rooms & Suites</h1>
+            <p class="page-banner-desc">Spacious living, tranquil interiors, and modern hospitality amenities tailored for corporate executives, wedding attendees, and leisure visitors.</p>
+        </div>
+    </header>
+
+    <!-- QUICK RESERVATION BAR -->
+    <div class="booking-strip-container" style="margin-top: -2.2rem;">
+        <div class="container">
+            <div class="booking-strip">
+                <form id="quickBookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="checkin"><i class="far fa-calendar-alt"></i> Check-In Date</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout"><i class="far fa-calendar-check"></i> Check-Out Date</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests"><i class="fas fa-users"></i> Guests / Stay</label>
+                        <select id="guests">
+                            <option value="1 Guest (Single Occupancy)">1 Guest (Business Traveler)</option>
+                            <option value="2 Guests (Double Occupancy)" selected>2 Guests (Executive)</option>
+                            <option value="3+ Guests (Family Suite)">3+ Guests (Family Function)</option>
+                            <option value="Group / Event Gathering">Group / Event Gathering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType"><i class="fas fa-concierge-bell"></i> Purpose / Room</label>
+                        <select id="roomType">
+                            <option value="Deluxe Executive Room">Deluxe Executive Room</option>
+                            <option value="Premium Luxury King Room">Premium Luxury King Room</option>
+                            <option value="Family Function Meet Stay">Family Function Meet Stay</option>
+                            <option value="Corporate Business Stay">Corporate Business Stay</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="height: 44px;">
+                        <i class="fab fa-whatsapp"></i> Check Availability
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROOM SHOWCASE SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore Our Room Categories</h2>
+                <p class="section-description">Every room at Hotel Grand 81 is designed with warm wooden aesthetics, plush bedding, and dedicated climate control.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1: Deluxe King -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="images/room1.jpg" alt="Executive Deluxe King Room" class="gallery-trigger" data-img="images/room1.jpg" data-caption="Executive Deluxe King Room with Mahogany Headboard & Linens">
+                        <div class="room-tag">37 Rooms Collection</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Executive Deluxe Room</h3>
+                        <p>Plush king bed, mahogany wood finish, crimson accent linens, soundproof glazing, and personal climate control for a peaceful retreat.</p>
+                        <div class="room-chips">
+                            <span class="room-chip"><i class="fas fa-wifi"></i> Free High-Speed Wi-Fi</span>
+                            <span class="room-chip"><i class="fas fa-snowflake"></i> Air Conditioned</span>
+                            <span class="room-chip"><i class="fas fa-tv"></i> Smart LED TV</span>
+                            <span class="room-chip"><i class="fas fa-bath"></i> Attached Luxury Bath</span>
+                        </div>
+                        <div class="room-footer">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--maroon-accent);"><i class="fas fa-shield-alt"></i> Daily Sanitized</span>
+                            <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20reserve%20the%20Executive%20Deluxe%20Room." target="_blank" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.8rem;">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2: Corporate Suite -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="images/room2.jpg" alt="Corporate Business Suite" class="gallery-trigger" data-img="images/room2.jpg" data-caption="Corporate Business Suite with Dedicated Workstation">
+                        <div class="room-tag">Corporate Travelers</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Corporate Work Suite</h3>
+                        <p>Equipped with an ergonomic work desk, executive swivel chair, tea & coffee maker, and uninterrupted high-speed internet.</p>
+                        <div class="room-chips">
+                            <span class="room-chip"><i class="fas fa-desktop"></i> Work Desk & Chair</span>
+                            <span class="room-chip"><i class="fas fa-coffee"></i> Tea/Coffee Setup</span>
+                            <span class="room-chip"><i class="fas fa-bolt"></i> Power Backup</span>
+                            <span class="room-chip"><i class="fas fa-phone"></i> Intercom Service</span>
+                        </div>
+                        <div class="room-footer">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-gold-dark);"><i class="fas fa-briefcase"></i> Work Ready</span>
+                            <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20reserve%20the%20Corporate%20Work%20Suite." target="_blank" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.8rem;">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3: Family Suite -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="images/room3.jpg" alt="Spacious Family Suite" class="gallery-trigger" data-img="images/room3.jpg" data-caption="Spacious Family Suite with Seating Lounge Area">
+                        <div class="room-tag">Family & Occasions</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Spacious Family Suite</h3>
+                        <p>Extra generous floor layout featuring a dedicated sitting lounge, ideal for wedding party stays, family meets, and extended holidays.</p>
+                        <div class="room-chips">
+                            <span class="room-chip"><i class="fas fa-couch"></i> Lounge Area</span>
+                            <span class="room-chip"><i class="fas fa-users"></i> Spacious Layout</span>
+                            <span class="room-chip"><i class="fas fa-parking"></i> Parking Reserved</span>
+                            <span class="room-chip"><i class="fas fa-concierge-bell"></i> 24/7 Room Service</span>
+                        </div>
+                        <div class="room-footer">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--maroon-accent);"><i class="fas fa-heart"></i> Warm Gesture</span>
+                            <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20reserve%20the%20Spacious%20Family%20Suite." target="_blank" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.8rem;">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IN-ROOM AMENITIES SPECIFICATION -->
+    <section class="section-padding" style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Amenities Included in Every Room</h2>
+                <p class="section-description">We take pride in providing a comprehensive suite of hotel amenities to make your stay effortless.</p>
+            </div>
+
+            <div class="amenities-spec-grid">
+                <div class="amenity-card">
+                    <i class="fas fa-wifi"></i>
+                    <h4>High-Speed Fiber Wi-Fi</h4>
+                    <p>Complimentary high-bandwidth internet accessible across all 37 rooms.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h4>Individual Climate Control</h4>
+                    <p>Adjust room temperature to your exact personal comfort preference.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fas fa-tv"></i>
+                    <h4>Smart HD Television</h4>
+                    <p>Entertainment channels and connectivity for movies and news.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fas fa-pump-soap"></i>
+                    <h4>Classic Toiletries</h4>
+                    <p>Complimentary soaps, shampoos, fresh towels, and bath essentials.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fas fa-shower"></i>
+                    <h4>24/7 Hot & Cold Water</h4>
+                    <p>Modern pressure showers with continuous temperature regulation.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fas fa-broom"></i>
+                    <h4>Daily Housekeeping</h4>
+                    <p>Professional daily room cleaning and linen refreshment service.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fas fa-parking"></i>
+                    <h4>Dedicated Parking</h4>
+                    <p>Secure parking spaces right at Vipul Plaza for hotel guests.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>100% Power Backup</h4>
+                    <p>Full generator backup ensuring uninterrupted comfort around the clock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAY POLICIES & GUIDELINES -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Check-In Policies & Guidelines</h2>
+                <p class="section-description">Clear and transparent policies ensuring a safe, serene, and pleasant environment for all guests.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div class="menu-category-card">
+                    <div class="menu-cat-header">
+                        <i class="fas fa-clock"></i>
+                        <h3>Timings</h3>
+                    </div>
+                    <p><strong>Check-In:</strong> 12:00 PM onwards</p>
+                    <p style="margin-top: 0.5rem;"><strong>Check-Out:</strong> 11:00 AM</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">Early check-in and late check-out available upon prior request and room availability.</p>
+                </div>
+
+                <div class="menu-category-card">
+                    <div class="menu-cat-header">
+                        <i class="fas fa-id-card"></i>
+                        <h3>ID Verification</h3>
+                    </div>
+                    <p>All adult guests must carry valid government-issued photo ID (Aadhaar Card, Passport, Voter ID, Driving License).</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">PAN Cards are not accepted as valid address proof per local regulations.</p>
+                </div>
+
+                <div class="menu-category-card">
+                    <div class="menu-cat-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Safety & Hygiene</h3>
+                    </div>
+                    <p>Rooms sanitized prior to check-in. Non-smoking room options available.</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">24-hour reception staff and CCTV monitoring in common areas for guest safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-luxury-banner">
+        <div class="container">
+            <h2>Ready to Book Your Room in Sector 81?</h2>
+            <p>Connect with Mr. Pritam Khanna directly for customized group bookings and best corporate rates.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/917042420045?text=Hello%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20book%20a%20room%20at%20Hotel%20Grand%2081." target="_blank" class="btn btn-primary" style="background:#FFF; color:var(--maroon-accent); border-color:#FFF;"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+                <a href="tel:7042420045" class="btn btn-outline" style="color:#FFF; border-color:#FFF;"><i class="fas fa-phone-alt"></i> Call +91 70424 20045</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo-title" style="color: #FFFFFF; font-size: 1.6rem; margin-bottom: 0.5rem;">HOTEL GRAND <span style="color:var(--primary-gold);">81</span></div>
+                    <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1rem;">
+                        Sector 81, Vipul Plaza, Near Amolik Plaza 81, Opposite World Street Omaxe Mall, Faridabad, Haryana.
+                    </p>
+                    <a href="tel:7042420045" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem; color: #FFFFFF; border-color: var(--primary-gold);"><i class="fas fa-phone"></i> Call Desk</a>
+                </div>
+
+                <div>
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">37 Rooms</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Dedicated Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="dining.html">Rooftop Dining Menu</a></li>
+                        <li><a href="services.html">Outdoor Catering & Lunches</a></li>
+                        <li><a href="contact.html">Location & Directions</a></li>
+                        <li><a href="contact.html">Contact & Booking</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Manager Contact</h4>
+                    <p style="color: #FFFFFF; font-weight: 600; font-size: 0.95rem;">Mr. Pritam Khanna</p>
+                    <p style="font-size: 0.88rem; margin-top: 0.25rem;"><i class="fas fa-phone-alt" style="color: var(--primary-gold);"></i> +91 70424 20045</p>
+                    <p style="font-size: 0.88rem; margin-top: 0.25rem;"><i class="fas fa-mobile-alt" style="color: var(--primary-gold);"></i> +91 89593 73839</p>
+                </div>
+            </div>
+
+            <!-- FOOTER PLATFORMS STRIP -->
+            <div class="footer-platforms-bar">
+                <div class="footer-platforms-title">
+                    <i class="fas fa-shield-alt" style="color: var(--primary-gold); margin-right: 0.4rem;"></i> Verified Across 9 Leading Platforms
+                </div>
+                <div class="footer-platforms-icons">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Instagram">
+                        <i class="fab fa-instagram" style="color: #E1306C; font-size: 1.1rem;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Facebook">
+                        <i class="fab fa-facebook-f" style="color: #1877F2; font-size: 1.05rem;"></i>
+                    </a>
+                    <a href="https://www.makemytrip.com/hotels/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="MakeMyTrip">
+                        <span style="font-size: 0.72rem; font-weight: 900; color: #E41D30;">MMT</span>
+                    </a>
+                    <a href="https://www.goibibo.com/hotels/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Goibibo">
+                        <span style="font-size: 0.75rem; font-weight: 900; color: #EC5B24;">go</span>
+                    </a>
+                    <a href="https://www.trivago.in/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Trivago">
+                        <span style="font-size: 0.68rem; font-weight: 900; color: #007FAC;">tri</span>
+                    </a>
+                    <a href="https://www.zomato.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Zomato">
+                        <i class="fas fa-utensils" style="color: #CB202D; font-size: 0.95rem;"></i>
+                    </a>
+                    <a href="https://www.skyscanner.co.in/hotels" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Skyscanner">
+                        <i class="fas fa-paper-plane" style="color: #0770E3; font-size: 0.95rem;"></i>
+                    </a>
+                    <a href="https://www.flyin.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Flyin">
+                        <i class="fas fa-plane-departure" style="color: #00A3E0; font-size: 0.95rem;"></i>
+                    </a>
+                    <a href="https://www.trip.com/hotels/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Trip.com">
+                        <i class="fas fa-globe" style="color: #2681FF; font-size: 1rem;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 Hotel Grand 81, Sector 81 Faridabad. All Rights Reserved.</div>
+                <div>Luxury Accommodations</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTIONS -->
+    <div class="floating-actions">
+        <a href="https://wa.me/917042420045?text=Hello%20Mr.%20Pritam%20Khanna,%20I%20am%20inquiring%20from%20the%20Hotel%20Grand%2081%20website." target="_blank" class="floating-btn floating-whatsapp" title="WhatsApp Chat">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:7042420045" class="floating-btn floating-call" title="Call Hotel Desk">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <img src="" id="modalImage" alt="Hotel Photo Preview" style="width: 100%; max-height: 70vh; object-fit: contain; display: block; border: 1px solid var(--border-light);">
+            <div id="modalCaption" style="margin-top: 0.75rem; text-align: center; font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary-gold-dark);"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Grand 81 | Luxury Stay & Fine Dining in Sector 81 Faridabad</title>
+    <meta name="description" content="Hotel Grand 81, Vipul Plaza Sector 81 Faridabad offers 37 well-appointed luxury rooms, Multi-Cuisine Rooftop Restaurant, Terrace Lounge, Outdoor Catering & Office Working Lunches. Direct Mathura-Delhi-Agra NH access. Contact Mr. Pritam Khanna: +91 70424 20045.">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Light Luxury Theme CSS (Zero Shadows) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP ANNOUNCEMENT BAR WITH AUTO-SLIDING TICKER FOR MOBILE & DESKTOP -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-ticker" id="topBarTicker">
+                <div class="ticker-item active">
+                    <i class="fas fa-map-marker-alt" style="color:var(--primary-gold);"></i> 
+                    <span>Vipul Plaza, Sector 81, Opposite World Street Omaxe Mall, Faridabad</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-phone-alt" style="color:var(--primary-gold);"></i> 
+                    <span>Mr. Pritam Khanna: <a href="tel:7042420045" style="color:#FFF; font-weight:700; text-decoration:underline;">+91 70424 20045</a></span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-mobile-alt" style="color:var(--primary-gold);"></i> 
+                    <span>Direct Call / WhatsApp: <a href="tel:8959373839" style="color:#FFF; font-weight:700; text-decoration:underline;">+91 89593 73839</a></span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-road" style="color:var(--primary-gold);"></i> 
+                    <span>Convenient Access to Mathura-Delhi-Agra National Highway</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STREAMLINED SINGLE-LINE NAVIGATION -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <!-- Sleek Logo -->
+            <a href="#home" class="logo-link">
+                <div class="logo-badge">81</div>
+                <div class="logo-text-box">
+                    <div class="logo-title">HOTEL GRAND <span>81</span></div>
+                    <div class="logo-sub">SECTOR 81 • FARIDABAD</div>
+                </div>
+            </a>
+
+            <!-- Clean Single-Row Navigation Menu -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rooms.html">37 Rooms</a></li>
+                <li><a href="dining.html">Rooftop Dining</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Header Action Button (Hidden on Mobile) & Mobile Menu Toggle -->
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <a href="https://wa.me/917042420045?text=Hello%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20inquire%20about%20booking%20at%20Hotel%20Grand%2081." target="_blank" class="btn btn-whatsapp nav-cta-btn" style="padding: 0.55rem 1.1rem; font-size: 0.82rem;">
+                    <i class="fab fa-whatsapp"></i> Quick Booking
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTINUOUS HERO IMAGE AUTO-SLIDER (RESPONSIVE: LAPTOP & PHONE IMAGES) -->
+    <section id="home" class="hero-slider-section">
+        <div class="hero-slider-container">
+            
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/Phone%201.png">
+                    <img src="images/laptop1_.png" alt="Hotel Grand 81 Luxury Stay & Hospitality" class="hero-slide-img">
+                </picture>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/phone%202.png">
+                    <img src="images/laptop2.png" alt="Hotel Grand 81 Prime Sector 81 Accommodations" class="hero-slide-img">
+                </picture>
+            </div>
+
+            <!-- Slide 3: Catering -->
+            <div class="hero-slide">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/phone%20catering.png">
+                    <img src="images/laptop%203%20catering.png" alt="Hotel Grand 81 Outdoor Catering & Fine Dining" class="hero-slide-img">
+                </picture>
+            </div>
+
+        </div>
+
+        <!-- Slider Arrow Controls -->
+        <button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow slider-next" id="sliderNext" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- QUICK RESERVATION BAR -->
+    <div class="booking-strip-container">
+        <div class="container">
+            <div class="booking-strip">
+                <form id="quickBookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="checkin"><i class="far fa-calendar-alt"></i> Check-In Date</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout"><i class="far fa-calendar-check"></i> Check-Out Date</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests"><i class="fas fa-users"></i> Guests / Stay</label>
+                        <select id="guests">
+                            <option value="1 Guest (Single Occupancy)">1 Guest (Business Traveler)</option>
+                            <option value="2 Guests (Double Occupancy)" selected>2 Guests (Executive)</option>
+                            <option value="3+ Guests (Family Suite)">3+ Guests (Family Function)</option>
+                            <option value="Group / Event Gathering">Group / Event Gathering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType"><i class="fas fa-concierge-bell"></i> Purpose / Room</label>
+                        <select id="roomType">
+                            <option value="Deluxe Executive Room">Deluxe Executive Room</option>
+                            <option value="Premium Luxury King Room">Premium Luxury King Room</option>
+                            <option value="Family Function Meet Stay">Family Function Meet Stay</option>
+                            <option value="Corporate Business Stay">Corporate Business Stay</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="height: 44px;">
+                        <i class="fab fa-whatsapp"></i> Check Availability
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT HOTEL SECTION -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-frame">
+                    <img src="images/Phone 1.png" alt="Hotel Grand 81 Warm Hospitality" class="gallery-trigger" data-img="images/Phone 1.png" data-caption="Warm Hospitality & Professional Service at Hotel Grand 81">
+                    <div class="about-badge">
+                        <div class="about-badge-num">37</div>
+                        <div class="about-badge-txt">Luxury Rooms</div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <h2 style="font-size: 2.4rem; margin-bottom: 1rem;">Comfortable Accommodations & Delectable Cuisine Food</h2>
+                    <p style="margin-bottom: 1rem; font-size: 1.02rem;">
+                        Located at <strong>Sector 81, Vipul Plaza (Near Amolik Plaza 81, Opposite World Street Omaxe Mall, Faridabad, Haryana)</strong>, Hotel Grand 81 is designed to cater to business travelers, family function meets, get-together occasions, and memorable dining experiences.
+                    </p>
+                    <p style="margin-bottom: 1.25rem;">
+                        Our core focus is simple: professional service, comfortable accommodation, delectable cuisine food quality with high gesture, and warm hospitality. Situated in a growing business hub with effortless connectivity to the Mathura-Delhi-Agra National Highway.
+                    </p>
+
+                    <div class="about-features-grid">
+                        <div class="about-feature-box"><i class="fas fa-check-circle"></i> 37 Well-Appointed Rooms</div>
+                        <div class="about-feature-box"><i class="fas fa-wifi"></i> Free High-Speed Wi-Fi</div>
+                        <div class="about-feature-box"><i class="fas fa-utensils"></i> Multi-Cuisine Rooftop</div>
+                        <div class="about-feature-box"><i class="fas fa-glass-cheers"></i> Terrace Lounge</div>
+                        <div class="about-feature-box"><i class="fas fa-parking"></i> On-Site Parking</div>
+                        <div class="about-feature-box"><i class="fas fa-briefcase"></i> Business Centre</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY STATS COUNTERS -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>37+</h3>
+                    <p>Luxury Rooms & Suites</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Hygienic Dining</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Dedicated Desk Service</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.9★</h3>
+                    <p>Guest Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MULTI-PLATFORM SOCIAL & TRAVEL BOOKING SECTION -->
+    <section id="platforms" class="platforms-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Connect & Book Across Leading Platforms</h2>
+                <p class="section-description">
+                    Hotel Grand 81 is available across top social networks and world-renowned travel portals. Book directly or through your favorite platform.
+                </p>
+            </div>
+
+            <div class="platforms-grid">
+                <!-- 1. Instagram -->
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-instagram">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="#FFFFFF" stroke-width="2"/>
+                                    <circle cx="12" cy="12" r="4.5" stroke="#FFFFFF" stroke-width="2"/>
+                                    <circle cx="17.5" cy="6.5" r="1.2" fill="#FFFFFF"/>
+                                </svg>
+                            </div>
+                            <span class="platform-badge"><i class="fab fa-instagram"></i> Social Hub</span>
+                        </div>
+                        <h3 class="platform-name">Instagram</h3>
+                        <p class="platform-desc">Explore our banquet setups, rooftop ambiance, room highlights & guest moments on Instagram.</p>
+                    </div>
+                    <span class="platform-action">Follow on Instagram <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 2. Facebook -->
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-facebook">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #1877F2;">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#FFFFFF"/>
+                                </svg>
+                            </div>
+                            <span class="platform-badge"><i class="fab fa-facebook-f"></i> Community</span>
+                        </div>
+                        <h3 class="platform-name">Facebook</h3>
+                        <p class="platform-desc">Read guest reviews, check community updates, seasonal events, and message us directly.</p>
+                    </div>
+                    <span class="platform-action">Visit Facebook Page <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 3. MakeMyTrip -->
+                <a href="https://www.makemytrip.com/hotels/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-makemytrip">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #FFFFFF; border: 1.5px solid #E41D30; padding: 2px;">
+                                <svg viewBox="0 0 38 38" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="7" width="18" height="24" rx="4" fill="#E41D30"/>
+                                    <text x="11" y="24" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="12">my</text>
+                                    <text x="29" y="24" text-anchor="middle" fill="#0A50A1" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="10">trip</text>
+                                </svg>
+                            </div>
+                            <span class="platform-badge" style="color: #E41D30; border-color: rgba(228, 29, 48, 0.3);">Verified Partner</span>
+                        </div>
+                        <h3 class="platform-name">MakeMyTrip</h3>
+                        <p class="platform-desc">Book 37 executive rooms with verified hotel amenities and instant confirmation on MakeMyTrip.</p>
+                    </div>
+                    <span class="platform-action">Book on MakeMyTrip <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 4. Goibibo -->
+                <a href="https://www.goibibo.com/hotels/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-goibibo">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #EC5B24;">
+                                <svg viewBox="0 0 36 36" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <text x="16" y="24" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" letter-spacing="-0.5">go</text>
+                                    <circle cx="28" cy="12" r="3" fill="#2276E3"/>
+                                </svg>
+                            </div>
+                            <span class="platform-badge" style="color: #EC5B24; border-color: rgba(236, 91, 36, 0.3);">Best Value</span>
+                        </div>
+                        <h3 class="platform-name">Goibibo</h3>
+                        <p class="platform-desc">Exclusive mobile rates, seamless check-in, and instant room guarantees through Goibibo.</p>
+                    </div>
+                    <span class="platform-action">Book on Goibibo <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 5. Trivago -->
+                <a href="https://www.trivago.in/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-trivago">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #FFFFFF; border: 1.5px solid #007FAC;">
+                                <svg viewBox="0 0 40 40" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <text x="20" y="25" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="12">
+                                        <tspan fill="#007FAC">tri</tspan><tspan fill="#F48F00">va</tspan><tspan fill="#C91C14">go</tspan>
+                                    </text>
+                                </svg>
+                            </div>
+                            <span class="platform-badge" style="color: #007FAC; border-color: rgba(0, 127, 172, 0.3);">Price Compare</span>
+                        </div>
+                        <h3 class="platform-name">Trivago</h3>
+                        <p class="platform-desc">Compare room rates across hundreds of hotel booking portals and secure the lowest price.</p>
+                    </div>
+                    <span class="platform-action">Compare on Trivago <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 6. Zomato -->
+                <a href="https://www.zomato.com/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-zomato">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #CB202D;">
+                                <svg viewBox="0 0 36 36" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <text x="18" y="23" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-style="italic" font-size="11" letter-spacing="-0.5">zomato</text>
+                                </svg>
+                            </div>
+                            <span class="platform-badge" style="color: #CB202D; border-color: rgba(203, 32, 45, 0.3);"><i class="fas fa-utensils"></i> Dining & Menu</span>
+                        </div>
+                        <h3 class="platform-name">Zomato</h3>
+                        <p class="platform-desc">Browse our rooftop restaurant menu, authentic food photos, diner ratings, and reserve tables.</p>
+                    </div>
+                    <span class="platform-action">View on Zomato <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 7. Skyscanner -->
+                <a href="https://www.skyscanner.co.in/hotels" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-skyscanner">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #0770E3;">
+                                <svg viewBox="0 0 36 36" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="18" cy="18" r="4" fill="#FFFFFF"/>
+                                    <path d="M18 7v4M18 25v4M7 18h4M25 18h4M10 10l3 3M23 23l3 3M10 26l3-3M23 13l3-3" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <span class="platform-badge" style="color: #0770E3; border-color: rgba(7, 112, 227, 0.3);">Global Search</span>
+                        </div>
+                        <h3 class="platform-name">Skyscanner</h3>
+                        <p class="platform-desc">Search flight and hotel combinations with trusted traveler reviews for Delhi NCR trips.</p>
+                    </div>
+                    <span class="platform-action">Search on Skyscanner <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 8. Flyin -->
+                <a href="https://www.flyin.com/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-flyin">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #00A3E0;">
+                                <svg viewBox="0 0 36 36" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 21c5-1 12-4 17-11-2 5-6 9-11 11h-6z" fill="#FFFFFF"/>
+                                    <path d="M11 24c6-.5 13-3 18-9-2.5 4.5-7 8-13 9h-5z" fill="#FFDE00"/>
+                                    <text x="18" y="31" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="7.5" letter-spacing="0.5">FLYIN</text>
+                                </svg>
+                            </div>
+                            <span class="platform-badge" style="color: #00A3E0; border-color: rgba(0, 163, 224, 0.3);">International OTA</span>
+                        </div>
+                        <h3 class="platform-name">Flyin</h3>
+                        <p class="platform-desc">Popular booking platform for Middle Eastern & worldwide visitors traveling to Faridabad.</p>
+                    </div>
+                    <span class="platform-action">Book on Flyin <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- 9. Trip.com -->
+                <a href="https://www.trip.com/hotels/" target="_blank" rel="noopener noreferrer" class="platform-card" id="platform-tripcom">
+                    <div>
+                        <div class="platform-card-header">
+                            <div class="platform-icon-wrap" style="background: #2681FF;">
+                                <svg viewBox="0 0 36 36" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="18" cy="13" r="6" stroke="#FFFFFF" stroke-width="1.8"/>
+                                    <ellipse cx="18" cy="13" rx="2.5" ry="6" stroke="#FFFFFF" stroke-width="1.3"/>
+                                    <text x="18" y="28" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="7.8">Trip.com</text>
+                                </svg>
+                            </div>
+                            <span class="platform-badge" style="color: #2681FF; border-color: rgba(38, 129, 255, 0.3);">Worldwide</span>
+                        </div>
+                        <h3 class="platform-name">Trip.com</h3>
+                        <p class="platform-desc">Global traveler support, multi-currency options, and verified luxury room listings on Trip.com.</p>
+                    </div>
+                    <span class="platform-action">Book on Trip.com <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 37 WELL-APPOINTED ROOMS -->
+    <section id="rooms" class="section-padding rooms-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">37 Well-Appointed Luxury Rooms</h2>
+                <p class="section-description">
+                    Comfortable rooms equipped with essential modern amenities for business and leisure stays in Sector 81 Faridabad.
+                </p>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="images/room1.jpg" alt="Deluxe King Room Hotel Grand 81" class="gallery-trigger" data-img="images/room1.jpg" data-caption="Executive Deluxe Room with King Bed & Classic Amenities">
+                        <div class="room-tag">37 Rooms Collection</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Executive Deluxe Room</h3>
+                        <p>Spacious room with plush king bed, mahogany wood finishes, crimson accent linens, and quiet climate control.</p>
+                        <div class="room-chips">
+                            <span class="room-chip"><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                            <span class="room-chip"><i class="fas fa-snowflake"></i> Air Conditioned</span>
+                            <span class="room-chip"><i class="fas fa-bath"></i> Classic Amenities</span>
+                        </div>
+                        <div class="room-footer">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--maroon-accent);"><i class="fas fa-shield-alt"></i> Clean & Sanitized</span>
+                            <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20reserve%20the%20Executive%20Deluxe%20Room." target="_blank" class="btn btn-outline" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+                                <i class="fab fa-whatsapp"></i> Reserve
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="images/room2.jpg" alt="Corporate Business Suite Hotel Grand 81" class="gallery-trigger" data-img="images/room2.jpg" data-caption="Corporate Business Suite with Work Desk & TV">
+                        <div class="room-tag">Business Travelers</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Corporate Work Suite</h3>
+                        <p>Tailored for corporate travelers with an ergonomic work desk, executive office chair, smart TV, and coffee station.</p>
+                        <div class="room-chips">
+                            <span class="room-chip"><i class="fas fa-desktop"></i> Work Desk</span>
+                            <span class="room-chip"><i class="fas fa-coffee"></i> Tea/Coffee Setup</span>
+                            <span class="room-chip"><i class="fas fa-wifi"></i> High-Speed Wi-Fi</span>
+                        </div>
+                        <div class="room-footer">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-gold-dark);"><i class="fas fa-briefcase"></i> Work Station</span>
+                            <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20reserve%20the%20Corporate%20Work%20Suite." target="_blank" class="btn btn-outline" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+                                <i class="fab fa-whatsapp"></i> Reserve
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="images/room3.jpg" alt="Spacious Family Suite Hotel Grand 81" class="gallery-trigger" data-img="images/room3.jpg" data-caption="Spacious Family Suite with Seating Lounge Area">
+                        <div class="room-tag">Family & Gatherings</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Spacious Family Suite</h3>
+                        <p>Extra spacious layout featuring a dedicated sitting lounge area, ideal for family function meets and get-togethers.</p>
+                        <div class="room-chips">
+                            <span class="room-chip"><i class="fas fa-couch"></i> Lounge Area</span>
+                            <span class="room-chip"><i class="fas fa-users"></i> Spacious Layout</span>
+                            <span class="room-chip"><i class="fas fa-parking"></i> On-Site Parking</span>
+                        </div>
+                        <div class="room-footer">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--maroon-accent);"><i class="fas fa-heart"></i> Warm Gesture</span>
+                            <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20want%20to%20reserve%20the%20Spacious%20Family%20Suite." target="_blank" class="btn btn-outline" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+                                <i class="fab fa-whatsapp"></i> Reserve
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Rooms CTA -->
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="rooms.html" class="btn btn-primary" style="padding: 0.85rem 2rem;">
+                    <i class="fas fa-bed"></i> View All 37 Rooms & Full Amenities <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOSPITALITY OFFERINGS (9 ALL-INCLUSIVE OFFERINGS) -->
+    <section id="offerings" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Hospitality Offerings</h2>
+                <p class="section-description">
+                    Nine core offerings dedicated to ensuring a seamless stay and dining experience at Hotel Grand 81.
+                </p>
+            </div>
+
+            <div class="offerings-grid">
+                <!-- 1 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-door-closed"></i></div>
+                        <h3 class="offering-title">37 Well-Appointed Rooms</h3>
+                    </div>
+                    <p class="offering-desc">Comfortable rooms with essential modern amenities for business and leisure stays.</p>
+                </div>
+                <!-- 2 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-wifi"></i></div>
+                        <h3 class="offering-title">Free Wi-Fi</h3>
+                    </div>
+                    <p class="offering-desc">Stay connected with complimentary high-speed fiber Wi-Fi throughout the hotel.</p>
+                </div>
+                <!-- 3 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-utensils"></i></div>
+                        <h3 class="offering-title">Multi-Cuisine Rooftop</h3>
+                    </div>
+                    <p class="offering-desc">A relaxed rooftop dining experience with a broad multi-cuisine gourmet selection.</p>
+                </div>
+                <!-- 4 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-glass-cheers"></i></div>
+                        <h3 class="offering-title">Terrace Lounge</h3>
+                    </div>
+                    <p class="offering-desc">An inviting terrace setting for relaxed conversations, pleasant evenings, and informal gatherings.</p>
+                </div>
+                <!-- 5 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-parking"></i></div>
+                        <h3 class="offering-title">On-Site Parking</h3>
+                    </div>
+                    <p class="offering-desc">Convenient parking spaces reserved for hotel guests, restaurant diners, and visitors.</p>
+                </div>
+                <!-- 6 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3 class="offering-title">Business Centre</h3>
+                    </div>
+                    <p class="offering-desc">Practical workspace, high-speed connectivity, and support for business requirements.</p>
+                </div>
+                <!-- 7 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-pump-soap"></i></div>
+                        <h3 class="offering-title">Classic Bathroom Amenities</h3>
+                    </div>
+                    <p class="offering-desc">Clean, well-maintained bathrooms with essential guest toiletries and bath linens.</p>
+                </div>
+                <!-- 8 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-truck-loading"></i></div>
+                        <h3 class="offering-title">Catering at Your Place</h3>
+                    </div>
+                    <p class="offering-desc">Professional catering services at your home, office, or chosen party venue.</p>
+                </div>
+                <!-- 9 -->
+                <div class="offering-card">
+                    <div class="offering-header">
+                        <div class="offering-icon"><i class="fas fa-box-tissue"></i></div>
+                        <h3 class="offering-title">Office Working Lunch</h3>
+                    </div>
+                    <p class="offering-desc">Convenient meal solutions for business meetings, corporate training sessions, and events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROOFTOP DINING & TERRACE LOUNGE -->
+    <section id="dining" class="section-padding dining-section">
+        <div class="container">
+            <div class="dining-grid">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Multi-Cuisine Rooftop Restaurant & Terrace Lounge</h2>
+                    <p style="margin-bottom: 1.25rem;">
+                        Enjoy an inviting terrace setting for relaxed conversations, pleasant evenings, and informal get-togethers. Our chef prepares rich North Indian dishes, tandoori specialties, Chinese dishes, and continental selections.
+                    </p>
+
+                    <div class="dining-box-grid">
+                        <div class="dining-box">
+                            <h4><i class="fas fa-drumstick-bite"></i> North Indian & Tandoor</h4>
+                            <p style="font-size: 0.85rem;">Delicious gravies, biryanis, and fresh tandoori breads.</p>
+                        </div>
+                        <div class="dining-box">
+                            <h4><i class="fas fa-cocktail"></i> Terrace Lounge</h4>
+                            <p style="font-size: 0.85rem;">Evening snacks, mocktails, and relaxed ambient setting.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20would%20like%20to%20reserve%20a%20table%20at%20the%20Rooftop%20Restaurant." target="_blank" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Reserve Rooftop Table
+                        </a>
+                        <a href="dining.html" class="btn btn-outline">
+                            <i class="fas fa-utensils"></i> Explore Full Dining Menu
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dining-img-frame">
+                    <img src="images/rooftop.jpg" alt="Rooftop Dining at Hotel Grand 81" class="gallery-trigger" data-img="images/rooftop.jpg" data-caption="Multi-Cuisine Rooftop Restaurant & Terrace Lounge">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIAL SERVICES: CATERING & WORKING LUNCH -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Outdoor Catering & Office Lunches</h2>
+                <p class="section-description">
+                    Professional food service brought directly to your doorstep in Faridabad.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div>
+                        <h3 style="color: var(--text-main);"><i class="fas fa-truck-loading" style="color: var(--primary-gold-dark);"></i> Catering at Your Place</h3>
+                        <p style="font-size: 0.95rem;">
+                            Professional catering services at your home, office, or chosen event venue. Complete with customized menus and uniformed service.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Customized Multi-Cuisine Buffets</li>
+                            <li><i class="fas fa-check-circle"></i> Uniformed Professional Service Staff</li>
+                            <li><i class="fas fa-check-circle"></i> Live Tandoor & Food Counters</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20am%20inquiring%20about%20Catering%20at%20My%20Place." target="_blank" class="btn btn-outline" style="width: 100%;">
+                        <i class="fab fa-whatsapp"></i> Inquire Outdoor Catering
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div>
+                        <h3 style="color: var(--text-main);"><i class="fas fa-briefcase" style="color: var(--primary-gold-dark);"></i> Office Working Lunch</h3>
+                        <p style="font-size: 0.95rem;">
+                            Convenient meal solutions for meetings, training sessions, and executive corporate gatherings across Sector 81 business hub.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Executive Thali & Meal Box Packaging</li>
+                            <li><i class="fas fa-check-circle"></i> Hygienic & Fresh Hot Delivery</li>
+                            <li><i class="fas fa-check-circle"></i> Daily/Weekly Corporate Subscriptions</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917042420045?text=Hi%20Mr.%20Pritam%20Khanna,%20I%20am%20inquiring%20about%20Office%20Working%20Lunches." target="_blank" class="btn btn-outline" style="width: 100%;">
+                        <i class="fab fa-whatsapp"></i> Order Corporate Lunches
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & STRATEGIC CONNECTIVITY -->
+    <section id="location" class="section-padding location-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Convenient Sector 81 Location</h2>
+                <p class="section-description">
+                    Reachable from all locations in Faridabad and connected to Mathura-Delhi-Agra National Highway.
+                </p>
+            </div>
+
+            <div class="location-grid">
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.45564883391!2d77.3485!3d28.3755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cddec245f778d%3A0xb2f4d1e2e1e0a2b!2sVipul%20Plaza%2C%20Sector%2081%2C%20Faridabad!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div class="location-details-box">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.75rem;">Hotel Grand 81 Address</h3>
+                    <p style="margin-bottom: 1.25rem; font-size: 0.95rem;">
+                        <strong>Hotel Grand 81</strong>, Sector 81, Vipul Plaza, Sector 81 Near Amolik Plaza 81, Opposite World Street Omaxe Mall, Faridabad, Haryana 121002
+                    </p>
+
+                    <div class="landmark-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <div>
+                            <h4 style="font-size: 1.05rem;">Opposite World Street Omaxe Mall</h4>
+                            <p style="font-size: 0.88rem;">Right across the street from Faridabad's premier shopping arcade.</p>
+                        </div>
+                    </div>
+
+                    <div class="landmark-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h4 style="font-size: 1.05rem;">Vipul Plaza & Amolik Plaza 81</h4>
+                            <p style="font-size: 0.88rem;">Situated inside Sector 81's prime commercial & business hub.</p>
+                        </div>
+                    </div>
+
+                    <div class="landmark-item">
+                        <i class="fas fa-road"></i>
+                        <div>
+                            <h4 style="font-size: 1.05rem;">Mathura - Delhi - Agra Highway</h4>
+                            <p style="font-size: 0.88rem;">Quick highway access for travelers between Delhi, Noida, Gurgaon & Agra.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Manager Card -->
+                <div class="contact-info-card">
+                    <div class="manager-row">
+                        <div class="manager-avatar">PK</div>
+                        <div>
+                            <h3 style="font-size: 1.5rem; color: var(--text-main);">Mr. Pritam Khanna</h3>
+                            <span style="font-size: 0.82rem; color: var(--primary-gold-dark); text-transform: uppercase; font-weight: 700;">Hotel Manager & Bookings</span>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.92rem; margin-bottom: 1.25rem;">
+                        Contact Mr. Pritam Khanna directly for room bookings, outdoor catering arrangements, office working lunches, or event reservations.
+                    </p>
+
+                    <a href="tel:7042420045" class="phone-btn-card">
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--primary-gold-dark); text-transform: uppercase; font-weight: 700;">Primary Contact</span>
+                            <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-main);">+91 70424 20045</div>
+                        </div>
+                        <div class="btn btn-primary" style="padding: 0.45rem 0.9rem; font-size: 0.8rem;"><i class="fas fa-phone-alt"></i> Call</div>
+                    </a>
+
+                    <a href="tel:8959373839" class="phone-btn-card">
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--primary-gold-dark); text-transform: uppercase; font-weight: 700;">Secondary Contact</span>
+                            <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-main);">+91 89593 73839</div>
+                        </div>
+                        <div class="btn btn-outline" style="padding: 0.45rem 0.9rem; font-size: 0.8rem;"><i class="fas fa-mobile-alt"></i> Call</div>
+                    </a>
+
+                    <a href="https://wa.me/917042420045?text=Hello%20Mr.%20Pritam%20Khanna,%20I%20am%20contacting%20you%20for%20a%20booking%20inquiry." target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                        <i class="fab fa-whatsapp"></i> Chat Live on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="inquiry-card">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.25rem;">Send Inquiry Message</h3>
+                    <form id="fullInquiryForm">
+                        <div class="form-row">
+                            <input type="text" id="inqName" class="form-field" placeholder="Your Full Name" required>
+                            <input type="tel" id="inqPhone" class="form-field" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-row">
+                            <select id="inqEventType" class="form-field">
+                                <option value="Room Reservation (37 Rooms)">37 Rooms Reservation</option>
+                                <option value="Family Function Meet">Family Function Meet</option>
+                                <option value="Rooftop Dining Table">Rooftop Restaurant Table</option>
+                                <option value="Catering at Your Place">Catering at Your Place</option>
+                                <option value="Office Working Lunch">Office Working Lunch</option>
+                            </select>
+                            <input type="date" id="inqDate" class="form-field" required>
+                        </div>
+                        <div style="margin-bottom: 1.25rem;">
+                            <textarea id="inqMessage" class="form-field" style="min-height: 100px;" placeholder="Details about your stay, dates, or catering requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fab fa-whatsapp"></i> Submit Inquiry to Mr. Pritam Khanna
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo-title" style="color: #FFFFFF; font-size: 1.6rem; margin-bottom: 0.5rem;">HOTEL GRAND <span style="color:var(--primary-gold);">81</span></div>
+                    <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1rem;">
+                        Sector 81, Vipul Plaza, Near Amolik Plaza 81, Opposite World Street Omaxe Mall, Faridabad, Haryana.
+                    </p>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="tel:7042420045" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem; color: #FFFFFF; border-color: var(--primary-gold);"><i class="fas fa-phone"></i> Call Desk</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">37 Rooms</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Dedicated Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="dining.html">Rooftop Dining Menu</a></li>
+                        <li><a href="services.html">Outdoor Catering & Lunches</a></li>
+                        <li><a href="contact.html">Location & Directions</a></li>
+                        <li><a href="contact.html">Contact & Booking</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Manager Contact</h4>
+                    <p style="color: #FFFFFF; font-weight: 600; font-size: 0.95rem;">Mr. Pritam Khanna</p>
+                    <p style="font-size: 0.88rem; margin-top: 0.25rem;"><i class="fas fa-phone-alt" style="color: var(--primary-gold);"></i> +91 70424 20045</p>
+                    <p style="font-size: 0.88rem; margin-top: 0.25rem;"><i class="fas fa-mobile-alt" style="color: var(--primary-gold);"></i> +91 89593 73839</p>
+                </div>
+            </div>
+
+            <!-- FOOTER PLATFORMS STRIP -->
+            <div class="footer-platforms-bar">
+                <div class="footer-platforms-title">
+                    <i class="fas fa-shield-alt" style="color: var(--primary-gold); margin-right: 0.4rem;"></i> Verified Across 9 Leading Platforms
+                </div>
+                <div class="footer-platforms-icons">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Instagram">
+                        <i class="fab fa-instagram" style="color: #E1306C; font-size: 1.1rem;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Facebook">
+                        <i class="fab fa-facebook-f" style="color: #1877F2; font-size: 1.05rem;"></i>
+                    </a>
+                    <a href="https://www.makemytrip.com/hotels/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="MakeMyTrip">
+                        <span style="font-size: 0.72rem; font-weight: 900; color: #E41D30;">MMT</span>
+                    </a>
+                    <a href="https://www.goibibo.com/hotels/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Goibibo">
+                        <span style="font-size: 0.75rem; font-weight: 900; color: #EC5B24;">go</span>
+                    </a>
+                    <a href="https://www.trivago.in/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Trivago">
+                        <span style="font-size: 0.68rem; font-weight: 900; color: #007FAC;">tri</span>
+                    </a>
+                    <a href="https://www.zomato.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Zomato">
+                        <i class="fas fa-utensils" style="color: #CB202D; font-size: 0.95rem;"></i>
+                    </a>
+                    <a href="https://www.skyscanner.co.in/hotels" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Skyscanner">
+                        <i class="fas fa-paper-plane" style="color: #0770E3; font-size: 0.95rem;"></i>
+                    </a>
+                    <a href="https://www.flyin.com/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Flyin">
+                        <i class="fas fa-plane-departure" style="color: #00A3E0; font-size: 0.95rem;"></i>
+                    </a>
+                    <a href="https://www.trip.com/hotels/" target="_blank" rel="noopener noreferrer" class="footer-platform-btn" title="Trip.com">
+                        <i class="fas fa-globe" style="color: #2681FF; font-size: 1rem;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 Hotel Grand 81, Sector 81 Faridabad. All Rights Reserved.</div>
+                <div>Zero Shadow Light Luxury Theme</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CONTACT BUTTONS -->
+    <div class="floating-actions">
+        <a href="https://wa.me/917042420045?text=Hello%20Mr.%20Pritam%20Khanna,%20I%20am%20inquiring%20from%20the%20Hotel%20Grand%2081%20website." target="_blank" class="floating-btn floating-whatsapp" title="WhatsApp Chat">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:7042420045" class="floating-btn floating-call" title="Call Hotel Desk">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <img src="" id="modalImage" alt="Hotel Photo Preview" style="width: 100%; max-height: 70vh; object-fit: contain; display: block; border: 1px solid var(--border-light);">
+            <div id="modalCaption" style="margin-top: 0.75rem; text-align: center; font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary-gold-dark);"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
