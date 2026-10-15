@@ -145,14 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const guests = document.getElementById('guests').value;
             const roomType = document.getElementById('roomType').value;
 
-            const message = `Hello Mr. Pritam Khanna, I would like to inquire about booking at *Hotel Grand 81*, Faridabad.%0A%0A` +
+            const message = `Hello Hotel Grand 81, I would like to inquire about booking at *Hotel Grand 81*, Faridabad.%0A%0A` +
                 `*Check-in:* ${checkin}%0A` +
                 `*Check-out:* ${checkout}%0A` +
                 `*Guests:* ${guests}%0A` +
                 `*Room/Requirement:* ${roomType}%0A%0A` +
                 `Please share room availability and best rates.`;
 
-            window.open(`https://wa.me/917042420045?text=${message}`, '_blank');
+            window.open(`https://wa.me/919953035222?text=${message}`, '_blank');
         });
     }
 
@@ -166,14 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const date = document.getElementById('inqDate').value;
             const messageText = document.getElementById('inqMessage').value;
 
-            const message = `Hello Mr. Pritam Khanna,%0A%0A` +
+            const message = `Hello Hotel Grand 81,%0A%0A` +
                 `My name is *${name}* (${phone}).%0A` +
                 `*Requirement:* ${eventType}%0A` +
                 `*Target Date:* ${date}%0A` +
                 `*Details:* ${messageText}%0A%0A` +
                 `Sent via Hotel Grand 81 Website.`;
 
-            window.open(`https://wa.me/917042420045?text=${message}`, '_blank');
+            window.open(`https://wa.me/919953035222?text=${message}`, '_blank');
         });
     }
 

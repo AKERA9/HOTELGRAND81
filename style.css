@@ -432,7 +432,7 @@ a {
 
 .slider-dots {
     position: absolute;
-    bottom: 3.2rem;
+    bottom: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 20;
@@ -457,12 +457,38 @@ a {
     border-radius: 5px;
 }
 
-/* QUICK BOOKING STRIP - SLIGHT OVERLAP ON IMAGE */
+/* QUICK BOOKING STRIP - POSITIONED CLEANLY BELOW HERO IMAGE */
 .booking-strip-container {
-    margin-top: -2.2rem;
-    margin-bottom: 1.5rem;
+    margin-top: 2.75rem;
+    margin-bottom: 2rem;
     position: relative;
     z-index: 35;
+}
+
+.booking-section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.booking-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    position: relative;
+    display: inline-block;
+}
+
+.booking-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-gold);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
 }
 
 .booking-strip {
@@ -700,11 +726,12 @@ a {
 }
 
 .room-chip {
-    font-size: 0.72rem;
-    background: var(--bg-surface-alt);
-    border: 1px solid var(--border-light);
-    color: var(--text-muted);
-    padding: 0.18rem 0.5rem;
+    font-size: 0.74rem;
+    background: #F4EFEA;
+    border: none;
+    border-radius: 4px;
+    color: var(--text-main);
+    padding: 0.25rem 0.55rem;
     font-weight: 500;
 }
 
@@ -802,20 +829,33 @@ a {
 .dining-box-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
-    margin: 1.25rem 0;
+    gap: 1.5rem;
+    margin: 1.25rem 0 1.5rem 0;
 }
 
 .dining-box {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-light);
-    padding: 0.85rem;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .dining-box h4 {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
+    color: var(--maroon-accent);
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dining-box h4 i {
     color: var(--primary-gold-dark);
-    margin-bottom: 0.2rem;
+}
+
+.dining-box p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.5;
 }
 
 /* SERVICES */
@@ -826,13 +866,14 @@ a {
 }
 
 .service-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-light);
-    border-top: 3px solid var(--primary-gold);
-    padding: 2rem;
+    background: #FAF7F2;
+    border: none;
+    border-radius: 8px;
+    padding: 2.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: var(--transition-normal);
 }
 
 .service-card h3 {
@@ -952,14 +993,16 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FFFFFF;
-    border: 1px solid var(--border-light);
-    padding: 0.75rem 1rem;
+    background: #FAF7F2;
+    border: none;
+    border-radius: 6px;
+    padding: 0.85rem 1.15rem;
     margin-bottom: 0.65rem;
+    transition: var(--transition-fast);
 }
 
 .phone-btn-card:hover {
-    border-color: var(--primary-gold);
+    background: #F4EFE6;
 }
 
 .inquiry-card {
@@ -1351,8 +1394,8 @@ a {
 }
 
 .amenity-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-light);
+    background: #FAF7F2;
+    border: none;
     border-radius: 8px;
     padding: 1.4rem;
     text-align: center;
@@ -1360,9 +1403,8 @@ a {
 }
 
 .amenity-card:hover {
-    border-color: var(--primary-gold);
+    background: #F4EFE6;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
 .amenity-card i {
@@ -1780,10 +1822,18 @@ a {
 
     /* BOOKING STRIP: CLEAN, FLAT LUXURY DESIGN WITHOUT HEAVY SHADOW OR OUTLINE */
     .booking-strip-container {
-        margin-top: 0.75rem;
-        margin-bottom: 1.5rem;
+        margin-top: 1.75rem;
+        margin-bottom: 1.75rem;
         padding: 0;
         width: 100%;
+    }
+
+    .booking-section-header {
+        margin-bottom: 1.15rem;
+    }
+
+    .booking-section-title {
+        font-size: 1.6rem;
     }
 
     .booking-strip {
