@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `*Room/Requirement:* ${roomType}%0A%0A` +
                 `Please share room availability and best rates.`;
 
-            window.open(`https://wa.me/919953035222?text=${message}`, '_blank');
+            window.open(`https://wa.me/917042420045?text=${message}`, '_blank');
         });
     }
 
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `*Details:* ${messageText}%0A%0A` +
                 `Sent via Hotel Grand 81 Website.`;
 
-            window.open(`https://wa.me/919953035222?text=${message}`, '_blank');
+            window.open(`https://wa.me/917042420045?text=${message}`, '_blank');
         });
     }
 

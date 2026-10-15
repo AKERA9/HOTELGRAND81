@@ -459,24 +459,24 @@ a {
 
 /* QUICK BOOKING STRIP - POSITIONED CLEANLY BELOW HERO IMAGE */
 .booking-strip-container {
-    margin-top: 2.75rem;
-    margin-bottom: 2rem;
+    margin-top: 0.85rem;
+    margin-bottom: 0.25rem;
     position: relative;
     z-index: 35;
 }
 
 .booking-section-header {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.65rem;
 }
 
 .booking-section-title {
     font-family: var(--font-heading);
-    font-size: 2.3rem;
+    font-size: 1.95rem;
     font-weight: 700;
     color: var(--text-main);
     letter-spacing: 0.02em;
-    line-height: 1.25;
+    line-height: 1.2;
     position: relative;
     display: inline-block;
 }
@@ -484,11 +484,15 @@ a {
 .booking-section-title::after {
     content: '';
     display: block;
-    width: 60px;
+    width: 45px;
     height: 3px;
     background: var(--primary-gold);
-    margin: 0.5rem auto 0;
+    margin: 0.25rem auto 0;
     border-radius: 2px;
+}
+
+#about {
+    padding-top: 1.5rem;
 }
 
 .booking-strip {
@@ -599,6 +603,25 @@ a {
     display: block;
 }
 
+/* ABOUT DIRECTORY BOARD FRAME (FULL PORTRAIT FIT - NO CROPPING) */
+.about-board-frame {
+    max-width: 380px;
+    margin: 0 auto;
+    border: 2px solid var(--primary-gold);
+    padding: 6px;
+    background: #FFFFFF;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-board-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: contain;
+    display: block;
+}
+
 .about-badge {
     position: absolute;
     bottom: -15px;
@@ -646,6 +669,10 @@ a {
 .about-feature-box i {
     color: var(--primary-gold-dark);
     font-size: 1rem;
+}
+
+#about {
+    padding-top: 2rem;
 }
 
 /* ROOMS SECTION */
@@ -1822,18 +1849,22 @@ a {
 
     /* BOOKING STRIP: CLEAN, FLAT LUXURY DESIGN WITHOUT HEAVY SHADOW OR OUTLINE */
     .booking-strip-container {
-        margin-top: 1.75rem;
-        margin-bottom: 1.75rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.25rem;
         padding: 0;
         width: 100%;
     }
 
     .booking-section-header {
-        margin-bottom: 1.15rem;
+        margin-bottom: 0.5rem;
     }
 
     .booking-section-title {
-        font-size: 1.6rem;
+        font-size: 1.35rem;
+    }
+
+    #about {
+        padding-top: 1.25rem;
     }
 
     .booking-strip {
@@ -1932,6 +1963,16 @@ a {
         max-height: 350px;
         width: 100%;
         object-fit: cover;
+    }
+
+    .about-board-frame {
+        max-width: 300px !important;
+        margin: 0 auto 1.5rem auto !important;
+    }
+
+    .about-board-frame img {
+        max-height: 460px !important;
+        object-fit: contain !important;
     }
 
     .about-badge {
