@@ -239,4 +239,49 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 8. CREDENTIALS & REVIEWS FILTER
+    const filterTabs = document.querySelectorAll('.filter-tab-btn');
+    const reviewCards = document.querySelectorAll('.review-luxury-card');
+    const displayedReviewCount = document.getElementById('displayedReviewCount');
+
+    if (filterTabs.length > 0 && reviewCards.length > 0) {
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filterValue = tab.getAttribute('data-filter');
+                let visibleCount = 0;
+
+                reviewCards.forEach(card => {
+                    const rating = parseInt(card.getAttribute('data-rating') || '0', 10);
+                    const platform = card.getAttribute('data-platform') || '';
+
+                    let show = false;
+                    if (filterValue === 'all') {
+                        show = true;
+                    } else if (filterValue === '5') {
+                        show = (rating === 5);
+                    } else if (filterValue === '4plus') {
+                        show = (rating >= 4);
+                    } else if (filterValue === platform) {
+                        show = true;
+                    }
+
+                    if (show) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (displayedReviewCount) {
+                    displayedReviewCount.textContent = visibleCount;
+                }
+            });
+        });
+    }
 });
+
